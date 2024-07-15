@@ -1,23 +1,27 @@
-import React, { Suspense, lazy } from "react";
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+//import { useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import SignupPage from "./pages/SignupPage";
+import NotFoundPage from "../pages/NotFoundPage";
 
-// Lazy loading the components
-const SignupPage = lazy(() => import("../pages/SignupPage"));
-const LoginPage = lazy(() => import("../pages/LoginPage"));
 
 
 function AppRoutes() {
-  return (
-    <Router>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route path="/" element={<SignupPagePage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-      </Suspense>
-    </Router>
-  );
+	return (
+		<Router>
+			<Routes>
+      <Route path="/" element={<SignupPage />} />
+			<Route path="*" element={<NotFoundPage />} />
+			
+      
+       
+        {/*Admin*/}
+			
+        {/*doctor*/}
+       
+			</Routes>
+		</Router>
+	);
 }
 
 export default AppRoutes;
+
