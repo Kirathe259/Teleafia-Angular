@@ -1,0 +1,42 @@
+/* Input field styles */
+.form-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.form-group input {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  background-color: transparent;
+}
+
+.form-group label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+  top: -5px;
+  left: 10px;
+  font-size: 0.75rem;
+  color: #c00100;
+}
+
+/* Input focus styles */
+.form-group input:focus {
+  border-color: #c00100;
+  outline: none;
+}
+
+
